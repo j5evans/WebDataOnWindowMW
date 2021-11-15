@@ -1,5 +1,7 @@
 package bsu.comp152.webdataonwindowmw;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -53,5 +55,11 @@ public class UniversityController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
+        ListControl.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<DataHandler.UniversityDataType>() {
+            @Override
+            public void changed(ObservableValue<? extends DataHandler.UniversityDataType> observableValue, DataHandler.UniversityDataType universityDataType, DataHandler.UniversityDataType t1) {
+
+            }
+        });
     }
 }

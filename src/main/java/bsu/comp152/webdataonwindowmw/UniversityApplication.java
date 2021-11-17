@@ -18,7 +18,7 @@ public class UniversityApplication extends Application {
         catch (IOException e) {
             System.out.println("Error loading FXML file or exception in controller class.");
         }
-        stage.setTitle("Hello!");
+        stage.setTitle("University Finder");
         stage.setScene(scene);
         stage.show();
     }

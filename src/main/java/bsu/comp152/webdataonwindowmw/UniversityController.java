@@ -19,7 +19,7 @@ public class UniversityController implements Initializable {
     private TextField NameField;
 
     @FXML
-    private TextField UniversityCountry;
+    private TextField UniversityCountryField;
 
     @FXML
     private TextField websiteDisplayField;
@@ -58,6 +58,9 @@ public class UniversityController implements Initializable {
         ListControl.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<DataHandler.UniversityDataType>() {
             @Override
             public void changed(ObservableValue<? extends DataHandler.UniversityDataType> observableValue, DataHandler.UniversityDataType universityDataType, DataHandler.UniversityDataType t1) {
+                NameField.setText(t1.name);
+                UniversityCountryField.setText(t1.country);
+                websiteDisplayField.setText(t1.web_pages.toString());
 
             }
         });
